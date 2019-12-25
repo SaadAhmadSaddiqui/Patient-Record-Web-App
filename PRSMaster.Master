@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PRSMaster.Master.cs" Inherits="Patient_Record_Web_App.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<%--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">--%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="text-align: center">
+            <div>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/FAVPNG_electronic-health-record-health-data-health-system-health-information-technology_KwUxETJj.png" Height="61px" Width="76px" />
+                <h1>Patient Record System</h1>
+            </div>
+            <div>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="HomePage.aspx">PRS</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="HomePage.aspx">Home</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Saad</a></li>
+                                    <li><a href="#">Meher</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="Register.aspx"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                            <li><a href="LoginForm.aspx"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+</body>
+</html>
