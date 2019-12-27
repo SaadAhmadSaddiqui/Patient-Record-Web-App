@@ -4,8 +4,10 @@
 
 <html>
 <head runat="server">
-<%--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">--%>
-<%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<%--    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--%>
     <title></title>
@@ -37,11 +39,11 @@
         <!-- The Navigation bar -->
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                
+
                 <a class="navbar-brand" href="HomePage.aspx">
                     <img src="Images/PRS-Logo.png" height="30" width="30" />PRS
                 </a>
-                
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -69,23 +71,15 @@
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton CssClass="nav-link" ID="linkLogIn" runat="server"><i class="fas fa-sign-in-alt"></i>Log in</asp:LinkButton>
-
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton CssClass="nav-link" ID="linkLogOut" runat="server"><i class="fas fa-sign-out-alt"></i>Log out</asp:LinkButton>
-
                         </li>
                         <li class="nav-item active">
                             <asp:LinkButton CssClass="nav-link" ID="linkMarket" runat="server"><i class="fas fa-pills"></i>Market Place</asp:LinkButton>
-
                         </li>
                     </ul>
-
-
-
-
                 </div>
-
                 <%--<div class="container-fluid">
                         <div class="navbar-header">
                             <a class="navbar-brand" href="HomePage.aspx">PRS</a>
@@ -113,33 +107,37 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-       <!-- Main Content Placeholder -->
+        <!-- Main Content Placeholder -->
 
-        <footer>
+        <footer class="footer">
             <div id="footer1" class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 text-center">
-                        <p>
+                    <div class="col-md-3 text-center">
+                        <p class="pt-3">
                             <asp:LinkButton ID="linkAdminLogin" CssClass="footerlinks" runat="server">Admin Login</asp:LinkButton>
-
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <p class="pt-3">
                             <asp:LinkButton ID="linkPatientManagement" CssClass="footerlinks" runat="server">Patient Management</asp:LinkButton>
-
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <p class="pt-3">
                             <asp:LinkButton ID="linkAppointmentManagement" CssClass="footerlinks" runat="server">Appointments</asp:LinkButton>
-
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <p class="pt-3">
                             <asp:LinkButton ID="linkMedicines" CssClass="footerlinks" runat="server">Medicines</asp:LinkButton>
-
                         </p>
                     </div>
                 </div>
             </div>
-
             <div id="footer2" class="container-fluid text-center">
                 <p>&copy All Rights Reserved. <a class="footerlinks" href="#">Saad&Co</a></p>
             </div>
         </footer>
-
     </form>
-
-
 </body>
 </html>

@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-sm-5" style="margin-left: 30%">
+    <div class="col-5" style="margin-left: 30%">
 
         <div class="form-box">
             <div class="form-top">
@@ -75,7 +75,7 @@
 
                 <div class="form-group">
 
-                    <asp:TextBox ID="Address" placeholder="Address" TextMode="multiline" Columns="40" Rows="10" runat="server" Height="75px" Width="410px" />
+                    <asp:TextBox ID="Address" class="form-username form-control" placeholder="Address" TextMode="multiline" Columns="40" Rows="10" runat="server" />
 
                 </div>
 

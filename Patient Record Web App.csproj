@@ -67,6 +67,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="All necessary Images\books\b1.jpg" />
+    <Content Include="All necessary Images\books\b2.jpg" />
+    <Content Include="All necessary Images\books\b3.jpg" />
+    <Content Include="All necessary Images\books\b4.jpg" />
+    <Content Include="All necessary Images\books\b5.jpg" />
+    <Content Include="All necessary Images\imgs\adminuser.png" />
+    <Content Include="All necessary Images\imgs\book-online.png" />
+    <Content Include="All necessary Images\imgs\books.png" />
+    <Content Include="All necessary Images\imgs\books1.png" />
+    <Content Include="All necessary Images\imgs\defaulters-list.png" />
+    <Content Include="All necessary Images\imgs\digital-data.png" />
+    <Content Include="All necessary Images\imgs\digital-inventory.png" />
+    <Content Include="All necessary Images\imgs\generaluser.png" />
+    <Content Include="All necessary Images\imgs\home-bg.jpg" />
+    <Content Include="All necessary Images\imgs\in-homepage-banner.jpg" />
+    <Content Include="All necessary Images\imgs\library.png" />
+    <Content Include="All necessary Images\imgs\publisher.png" />
+    <Content Include="All necessary Images\imgs\search-online.png" />
+    <Content Include="All necessary Images\imgs\sign-up.png" />
+    <Content Include="All necessary Images\imgs\writer.png" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.4.1.slim.min.js" />
@@ -1670,9 +1691,17 @@
     <Content Include="Register.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Style\css\style.css" />
+    <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1708,6 +1737,13 @@
     </Compile>
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

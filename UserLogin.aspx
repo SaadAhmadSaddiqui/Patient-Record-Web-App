@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PRSMaster.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="Patient_Record_Web_App.SignUp1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PRSMaster.Master" AutoEventWireup="true" CodeBehind="UserLogin.aspx.cs" Inherits="Patient_Record_Web_App.UserLogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,7 +19,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <h3>Member Sign Up</h3>
+                                    <h3>Member Login</h3>
                                 </center>
                             </div>
                         </div>
@@ -29,25 +29,20 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col text-center">                                
-                                <span class="badge badge-pill badge-primary">Login credentials</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <i class="fa fa-pencil"></i>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col">
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtUsername" placeholder="Username" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="txtPassword" placeholder="Password" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="txtPassword" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button ID="btnSignUp" CssClass="btn btn-success btn-block" runat="server" Text="Sign Up" />
+                                    <asp:Button ID="btnLogin" CssClass="btn btn-primary btn-block" runat="server" Text="Login" />
+                                </div>
+                                <div class="form-group">
+                                    <a href="SignUp.aspx">
+                                        <input id="btnSignUp" Class="btn btn-dark btn-block" type="button" value="Sign Up" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -57,6 +52,5 @@
             </div>
         </div>
     </div>
-    <i class="fa fa-pencil"></i>s
-
+    <i class="fa fa-pencil"></i>
 </asp:Content>
