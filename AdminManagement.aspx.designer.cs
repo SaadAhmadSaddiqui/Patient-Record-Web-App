@@ -11,70 +11,79 @@ namespace Patient_Record_Web_App
 {
 
 
-    public partial class SignUp
+    public partial class AdminManagement
     {
 
         /// <summary>
-        /// sName control.
+        /// txtAdminID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sName;
+        protected global::System.Web.UI.WebControls.TextBox txtAdminID;
 
         /// <summary>
-        /// sBirthDate control.
+        /// btnPGo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sBirthDate;
+        protected global::System.Web.UI.WebControls.Button btnPGo;
 
         /// <summary>
-        /// sEmail control.
+        /// txtAdminUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtAdminUsername;
 
         /// <summary>
-        /// sPassword control.
+        /// txtAdminPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtAdminPassword;
 
         /// <summary>
-        /// scPassword control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox scPassword;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
 
         /// <summary>
-        /// Phone control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Phone;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
 
         /// <summary>
-        /// Address control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Address;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+
+        /// <summary>
+        /// gvAdmins control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvAdmins;
     }
 }

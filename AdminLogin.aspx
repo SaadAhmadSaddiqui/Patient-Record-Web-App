@@ -10,17 +10,13 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
-                                <center>
-                                    <img width="150px" src="All necessary Images/imgs/adminuser.png" alt="General User" />
-                                </center>
+                            <div class="col text-center">
+                                    <img width="150" src="All necessary Images/imgs/adminuser.png" alt="General User" />
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
-                                <center>
+                            <div class="col text-center">
                                     <h3>Admin Login</h3>
-                                </center>
                             </div>
                         </div>
                         <div class="row">

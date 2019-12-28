@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminManagement.aspx" />
     <Content Include="All necessary Images\books\b1.jpg" />
     <Content Include="All necessary Images\books\b2.jpg" />
     <Content Include="All necessary Images\books\b3.jpg" />
@@ -88,6 +89,7 @@
     <Content Include="All necessary Images\imgs\search-online.png" />
     <Content Include="All necessary Images\imgs\sign-up.png" />
     <Content Include="All necessary Images\imgs\writer.png" />
+    <Content Include="Appointments.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.4.1.slim.min.js" />
@@ -1687,8 +1689,8 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\PRS-Logo.png" />
-    <Content Include="LoginForm.aspx" />
-    <Content Include="Register.aspx" />
+    <Content Include="MedInfo.aspx" />
+    <Content Include="PatientInfo.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Style\css\style.css" />
     <Content Include="UserLogin.aspx" />
@@ -1702,6 +1704,20 @@
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminManagement.aspx.cs">
+      <DependentUpon>AdminManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminManagement.aspx.designer.cs">
+      <DependentUpon>AdminManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments.aspx.cs">
+      <DependentUpon>Appointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointments.aspx.designer.cs">
+      <DependentUpon>Appointments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1709,12 +1725,19 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.aspx.cs">
-      <DependentUpon>LoginForm.aspx</DependentUpon>
+    <Compile Include="MedInfo.aspx.cs">
+      <DependentUpon>MedInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginForm.aspx.designer.cs">
-      <DependentUpon>LoginForm.aspx</DependentUpon>
+    <Compile Include="MedInfo.aspx.designer.cs">
+      <DependentUpon>MedInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientInfo.aspx.cs">
+      <DependentUpon>PatientInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientInfo.aspx.designer.cs">
+      <DependentUpon>PatientInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PRSMaster.Master.cs">
@@ -1723,13 +1746,6 @@
     </Compile>
     <Compile Include="PRSMaster.Master.designer.cs">
       <DependentUpon>PRSMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>

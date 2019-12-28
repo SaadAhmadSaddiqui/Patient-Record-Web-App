@@ -11,124 +11,133 @@ namespace Patient_Record_Web_App
 {
 
 
-    public partial class Site1
+    public partial class PatientInfo
     {
 
         /// <summary>
-        /// head control.
+        /// txtPatientID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox txtPatientID;
 
         /// <summary>
-        /// form1 control.
+        /// btnGo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button btnGo;
 
         /// <summary>
-        /// Image1 control.
+        /// txtPatientName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.TextBox txtPatientName;
 
         /// <summary>
-        /// linkMarket control.
+        /// txtPatientAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkMarket;
+        protected global::System.Web.UI.WebControls.TextBox txtPatientAge;
 
         /// <summary>
-        /// linkLogIn control.
+        /// txtPatientGenders control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkLogIn;
+        protected global::System.Web.UI.WebControls.DropDownList txtPatientGenders;
 
         /// <summary>
-        /// linkLogOut control.
+        /// txtPatientBT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkLogOut;
+        protected global::System.Web.UI.WebControls.DropDownList txtPatientBT;
 
         /// <summary>
-        /// linkSignUp control.
+        /// txtPatientContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkSignUp;
+        protected global::System.Web.UI.WebControls.TextBox txtPatientContact;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// txtPatientStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.DropDownList txtPatientStatus;
 
         /// <summary>
-        /// linkAdminLogin control.
+        /// txtGuardianName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkAdminLogin;
+        protected global::System.Web.UI.WebControls.TextBox txtGuardianName;
 
         /// <summary>
-        /// linkPatientManagement control.
+        /// txtGuardianContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkPatientManagement;
+        protected global::System.Web.UI.WebControls.TextBox txtGuardianContact;
 
         /// <summary>
-        /// linkAppointmentManagement control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkAppointmentManagement;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
 
         /// <summary>
-        /// linkMedicines control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkMedicines;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
 
         /// <summary>
-        /// linkAdminManagement control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkAdminManagement;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+
+        /// <summary>
+        /// gvPatient control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvPatient;
     }
 }

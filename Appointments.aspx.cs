@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Patient_Record_Web_App
 {
-    public partial class SignUp : System.Web.UI.Page
+    public partial class Appointments : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

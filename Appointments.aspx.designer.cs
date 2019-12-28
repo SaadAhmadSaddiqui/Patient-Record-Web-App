@@ -11,124 +11,106 @@ namespace Patient_Record_Web_App
 {
 
 
-    public partial class Site1
+    public partial class Appointments
     {
 
         /// <summary>
-        /// head control.
+        /// txtPatientID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox txtPatientID;
 
         /// <summary>
-        /// form1 control.
+        /// btnPGo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button btnPGo;
 
         /// <summary>
-        /// Image1 control.
+        /// txtPatientName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.TextBox txtPatientName;
 
         /// <summary>
-        /// linkMarket control.
+        /// txtVisitID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkMarket;
+        protected global::System.Web.UI.WebControls.TextBox txtVisitID;
 
         /// <summary>
-        /// linkLogIn control.
+        /// BtnVGo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkLogIn;
+        protected global::System.Web.UI.WebControls.Button BtnVGo;
 
         /// <summary>
-        /// linkLogOut control.
+        /// txtVisitDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkLogOut;
+        protected global::System.Web.UI.WebControls.TextBox txtVisitDate;
 
         /// <summary>
-        /// linkSignUp control.
+        /// txtVisitTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkSignUp;
+        protected global::System.Web.UI.WebControls.TextBox txtVisitTime;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
 
         /// <summary>
-        /// linkAdminLogin control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkAdminLogin;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
 
         /// <summary>
-        /// linkPatientManagement control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkPatientManagement;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
 
         /// <summary>
-        /// linkAppointmentManagement control.
+        /// gvVisits control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkAppointmentManagement;
-
-        /// <summary>
-        /// linkMedicines control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkMedicines;
-
-        /// <summary>
-        /// linkAdminManagement control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton linkAdminManagement;
+        protected global::System.Web.UI.WebControls.GridView gvVisits;
     }
 }
