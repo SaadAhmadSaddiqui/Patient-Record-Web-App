@@ -70,13 +70,13 @@
                             <asp:LinkButton CssClass="nav-link" ID="linkMarket" runat="server"><i class="fas fa-pills"></i>Market Place</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton CssClass="nav-link" ID="linkLogIn" runat="server"><i class="fas fa-sign-in-alt"></i>Log in</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="linkLogIn" runat="server" OnClick="linkLogIn_Click"><i class="fas fa-sign-in-alt"></i>Log in</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton CssClass="nav-link" ID="linkLogOut" runat="server"><i class="fas fa-sign-out-alt"></i>Log out</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="linkLogOut" runat="server" OnClick="linkLogOut_Click" Visible="False"><i class="fas fa-sign-out-alt"></i>Log out</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton CssClass="nav-link" ID="linkSignUp" runat="server"><i class="fas fa-user-plus"></i>Sign up</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="linkSignUp" runat="server" OnClick="linkSignUp_Click"><i class="fas fa-user-plus"></i>Sign up</asp:LinkButton>
                         </li>
                     </ul>
                 </div>
@@ -93,29 +93,13 @@
         <footer class="footer">
             <div id="footer1" class="container-fluid">
                 <div class="row">
-                    <div class="col-md-3 text-center">
+                    <div class="col-12 col-sm-12 col-md-12 text-center">
                         <p class="pt-3">
-                            <asp:LinkButton ID="linkAdminLogin" CssClass="footerlinks" runat="server">Admin Login</asp:LinkButton>
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <p class="pt-3">
-                            <asp:LinkButton ID="linkPatientManagement" CssClass="footerlinks" runat="server">Patient Management</asp:LinkButton>
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <p class="pt-3">
-                            <asp:LinkButton ID="linkAppointmentManagement" CssClass="footerlinks" runat="server">Appointments</asp:LinkButton>
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <p class="pt-3">
-                            <asp:LinkButton ID="linkMedicines" CssClass="footerlinks" runat="server">Medicines</asp:LinkButton>
-                        </p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <p class="pt-3">
-                            <asp:LinkButton ID="linkAdminManagement" CssClass="footerlinks" runat="server">Admin Management</asp:LinkButton>
+                            <asp:LinkButton ID="linkAdminLogin" CssClass="footerlinks" runat="server" OnClick="linkAdminLogin_Click">Admin Login</asp:LinkButton>
+                            <asp:LinkButton ID="linkPatientManagement" CssClass="footerlinks" runat="server" Enabled="False" OnClick="linkPatientManagement_Click" Visible="False">Patient Management</asp:LinkButton>
+                            <asp:LinkButton ID="linkAppointmentManagement" CssClass="footerlinks" runat="server" Enabled="False" OnClick="linkAppointmentManagement_Click" Visible="False">Appointments</asp:LinkButton>
+                            <asp:LinkButton ID="linkMedicines" CssClass="footerlinks" runat="server" Enabled="False" OnClick="linkMedicines_Click" Visible="False">Medicines</asp:LinkButton>
+                            <asp:LinkButton ID="linkAdminManagement" CssClass="footerlinks" runat="server" OnClick="linkAdminManagement_Click" Visible="False">Admin Management</asp:LinkButton>
                         </p>
                     </div>
                 </div>

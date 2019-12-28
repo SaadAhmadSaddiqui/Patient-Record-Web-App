@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
-                                    <img width="150" src="All necessary Images/imgs/generaluser.png" alt="General User" />
+                                <img width="150" src="All necessary Images/imgs/generaluser.png" alt="General User" />
                             </div>
                         </div>
                         <div class="row">
