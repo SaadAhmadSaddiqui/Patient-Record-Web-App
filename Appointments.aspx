@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <i class="fa fa-pencil"></i>
+    <br />
     <div class="container-fluid">
         <div class="row">
             <%-- Left Card (Appointment Booking) --%>
@@ -109,6 +109,6 @@
             </div>
         </div>
     </div>
-    <i class="fa fa-pencil"></i>s
+    <br />
 
 </asp:Content>

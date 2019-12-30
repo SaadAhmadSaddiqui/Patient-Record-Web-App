@@ -3,8 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <i class="fa fa-pencil"></i>
-    <div class="container">
+    <br />
+    <div class="container-fluid">
         <div class="row">
             <%-- Left Card (Med Details) --%>
             <div class="col-md-5">
@@ -14,13 +14,13 @@
                         <%-- Medicine Details --%>
                         <div class="row">
                             <div class="col text-center">
-                                    <h4>Medicine Details</h4>
+                                <h4>Medicine Details</h4>
                             </div>
                         </div>
                         <%-- Medicine Icon --%>
                         <div class="row">
                             <div class="col text-center">
-                                    <i class="fas fa-prescription-bottle-alt fa-6x"></i>
+                                <i class="fas fa-prescription-bottle-alt fa-6x"></i>
                             </div>
                         </div>
                         <%-- Horizontal Rule --%>
@@ -49,7 +49,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                        <asp:TextBox CssClass="form-control" ID="txtMedFormula" placeholder="Formula" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="txtMedFormula" placeholder="Formula" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -62,7 +62,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                        <asp:TextBox CssClass="form-control" ID="txtMedManufacturer" placeholder="Manufacturer" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="txtMedManufacturer" placeholder="Manufacturer" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -94,7 +94,7 @@
                         <%-- Title Med List --%>
                         <div class="row">
                             <div class="col text-center">
-                                    <h4>Medicine List</h4>
+                                <h4>Medicine List</h4>
                             </div>
                         </div>
                         <%-- Horizontal Rule --%>
@@ -114,6 +114,6 @@
             </div>
         </div>
     </div>
-    <i class="fa fa-pencil"></i>s
+    <br />
 
 </asp:Content>

@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <i class="fa fa-pencil"></i>
+    <br />
     <div class="container-fluid">
         <div class="row">
             <%-- Left Card (Admin Details) --%>
@@ -49,7 +49,7 @@
                         <%-- Break --%>
                         <div class="row">
                             <div class="col">
-                                <i class="fa fa-pencil"></i>
+                                <br />
                             </div>
                         </div>
                         <%-- Admin Username And Password Row --%>
@@ -108,6 +108,6 @@
             </div>
         </div>
     </div>
-    <i class="fa fa-pencil"></i>s
+    <br />
 
 </asp:Content>

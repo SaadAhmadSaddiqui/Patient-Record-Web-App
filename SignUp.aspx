@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <i class="fa fa-pencil"></i>
+    <br />
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
@@ -11,12 +11,12 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
-                                    <img width="150" src="All necessary Images/imgs/generaluser.png" alt="General User" />
+                                <img width="150" src="All necessary Images/imgs/generaluser.png" alt="General User" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col text-center">
-                                    <h3>Member Sign Up</h3>
+                                <h3>Member Sign Up</h3>
                             </div>
                         </div>
                         <div class="row">
@@ -25,15 +25,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col text-center">                                
+                            <div class="col text-center">
                                 <span class="badge badge-pill badge-primary">Login credentials</span>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <i class="fa fa-pencil"></i>
-                            </div>
-                        </div>
+                        <br />
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -43,7 +39,7 @@
                                     <asp:TextBox CssClass="form-control" ID="txtPassword" placeholder="Password" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button ID="btnSignUp" CssClass="btn btn-success btn-block" runat="server" Text="Sign Up" />
+                                    <asp:Button ID="btnSignUp" CssClass="btn btn-success btn-block" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />
                                 </div>
                             </div>
                         </div>
@@ -53,6 +49,5 @@
             </div>
         </div>
     </div>
-    <i class="fa fa-pencil"></i>s
-
+    <br />
 </asp:Content>

@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <i class="fa fa-pencil"></i>
+    <br />
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="row">
                             <div class="col text-center">
-                                    <h3>Member Login</h3>
+                                <h3>Member Login</h3>
                             </div>
                         </div>
                         <div class="row">
@@ -33,11 +33,12 @@
                                     <asp:TextBox CssClass="form-control" ID="txtPassword" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button ID="btnLogin" CssClass="btn btn-primary btn-block" runat="server" Text="Login" />
+                                    <input id="Button1" type="button" value="button" runat="server"/>
+                                    <asp:Button ID="btnLogin" CssClass="btn btn-success btn-block" runat="server" Text="Login" OnClick="btnLogin_Click" />
                                 </div>
                                 <div class="form-group">
                                     <a href="SignUp.aspx">
-                                        <input id="btnSignUp" Class="btn btn-dark btn-block" type="button" value="Sign Up" />
+                                        <input id="btnSignUp" class="btn btn-dark btn-block" type="button" value="Sign Up" />
                                     </a>
                                 </div>
                             </div>
@@ -48,5 +49,5 @@
             </div>
         </div>
     </div>
-    <i class="fa fa-pencil"></i>
+    <br />
 </asp:Content>
