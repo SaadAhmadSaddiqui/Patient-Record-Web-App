@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PRSMaster.Master" AutoEventWireup="true" CodeBehind="AdminManagement.aspx.cs" Inherits="Patient_Record_Web_App.AdminManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.table').prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable({/* "scrollX": true, */"scrollY": 300 });
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -35,7 +40,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <asp:TextBox CssClass="form-control" ID="txtAdminID" placeholder="Admin ID" runat="server"></asp:TextBox>
-                                        <asp:Button ID="btnPGo" CssClass="btn btn-secondary" runat="server" Text="Go" />
+                                        <asp:Button ID="btnPGo" CssClass="btn btn-secondary" runat="server" Text="Go" OnClick="btnPGo_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -68,13 +73,13 @@
                         <%-- Buttons Row --%>
                         <div class="row">
                             <div class="col-md-4">
-                                <asp:Button ID="btnAdd" CssClass="btn btn-success btn-block" runat="server" Text="Add" />
+                                <asp:Button ID="btnAdd" CssClass="btn btn-success btn-block" runat="server" Text="Add" OnClick="btnAdd_Click" />
                             </div>
                             <div class="col-md-4">
-                                <asp:Button ID="btnUpdate" CssClass="btn btn-primary btn-block" runat="server" Text="Update" />
+                                <asp:Button ID="btnUpdate" CssClass="btn btn-warning btn-block" runat="server" Text="Update" OnClick="btnUpdate_Click" />
                             </div>
                             <div class="col-md-4">
-                                <asp:Button ID="btnDelete" CssClass="btn btn-danger btn-block" runat="server" Text="Delete" />
+                                <asp:Button ID="btnDelete" CssClass="btn btn-danger btn-block" runat="server" Text="Delete" OnClick="btnDelete_Click" />
                             </div>
                         </div>
                     </div>
@@ -100,7 +105,16 @@
                         <%-- Admin List GridView --%>
                         <div class="row">
                             <div class="col">
-                                <asp:GridView CssClass="table table-striped table-bordered" ID="gvAdmins" runat="server"></asp:GridView>
+                                <asp:GridView CssClass="table table-striped table-bordered" ID="gvAdmins" runat="server" AutoGenerateColumns="False" DataKeyNames="adminID" DataSourceID="AdminGVCS">
+                                    <Columns>
+                                        <asp:BoundField DataField="adminID" HeaderText="Admin ID" InsertVisible="False" ReadOnly="True" SortExpression="adminID">
+                                        <ItemStyle Font-Bold="True" />
+                                        </asp:BoundField>
+                                        <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+                                        <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="AdminGVCS" runat="server" ConnectionString="<%$ ConnectionStrings:PatientGVCS %>" SelectCommand="SELECT * FROM [AdminLogin]"></asp:SqlDataSource>
                             </div>
                         </div>
                     </div>

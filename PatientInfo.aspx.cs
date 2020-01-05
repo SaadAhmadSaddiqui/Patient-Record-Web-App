@@ -59,7 +59,7 @@ namespace Patient_Record_Web_App
                     con.Open();
                 }
 
-                if (txtPatientName.Text == "" || txtPatientAge.Text == "" || txtPatientGenders.SelectedItem.Value == "" || txtPatientBT.SelectedItem.Value == "" || txtPatientStatus.SelectedItem.Value == "" || txtPatientContact.Text == "" || txtGuardianName.Text == "" || txtGuardianContact.Text == "" || txtPatientEmail.Text == "")
+                if (txtPatientName.Text == "" || txtPatientAge.Text == "" || txtPatientGenders.SelectedItem.Value == "" || txtPatientGenders.SelectedItem.Value == "Select" || txtPatientBT.SelectedItem.Value == "" || txtPatientBT.SelectedItem.Value == "Select" || txtPatientStatus.SelectedItem.Value == "" || txtPatientStatus.SelectedItem.Value == "Select" || txtPatientContact.Text == "" || txtGuardianName.Text == "" || txtGuardianContact.Text == "" || txtPatientEmail.Text == "")
                 {
                     Response.Write("<script>alert('Fill in all the fields!');</script>");
                 }
@@ -207,7 +207,7 @@ namespace Patient_Record_Web_App
                         txtPatientName.Text = dr.GetValue(1).ToString();
                         txtPatientAge.Text = dr.GetValue(2).ToString();
                         txtPatientGenders.Text = dr.GetValue(3).ToString();
-                        txtPatientBT.SelectedItem.Value = dr.GetValue(4).ToString();
+                        txtPatientBT.Text = dr.GetValue(4).ToString();
                         txtPatientStatus.Text = dr.GetValue(5).ToString();
                         txtPatientContact.Text = dr.GetValue(6).ToString();
                         txtGuardianName.Text = dr.GetValue(7).ToString();

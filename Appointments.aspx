@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PRSMaster.Master" AutoEventWireup="true" CodeBehind="Appointments.aspx.cs" Inherits="Patient_Record_Web_App.Appointments" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $('.table').prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable({/* "scrollX": true, */"scrollY": 300 });
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -35,7 +41,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <asp:TextBox CssClass="form-control" ID="txtPatientID" placeholder="Patient ID" runat="server"></asp:TextBox>
-                                        <asp:Button ID="btnPGo" CssClass="btn btn-secondary" runat="server" Text="Go" />
+                                        <asp:Button ID="btnPGo" CssClass="btn btn-secondary" runat="server" Text="Go" OnClick="btnPGo_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +57,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <asp:TextBox CssClass="form-control" ID="txtVisitID" placeholder="Visit ID" runat="server"></asp:TextBox>
-                                        <asp:Button ID="BtnVGo" CssClass="btn btn-secondary" runat="server" Text="Go" />
+                                        <asp:Button ID="BtnVGo" CssClass="btn btn-secondary" runat="server" Text="Go" OnClick="BtnVGo_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -69,13 +75,13 @@
                         <%-- Buttons Row --%>
                         <div class="row">
                             <div class="col-md-4">
-                                <asp:Button ID="btnAdd" CssClass="btn btn-success btn-block" runat="server" Text="Add" />
+                                <asp:Button ID="btnAdd" CssClass="btn btn-success btn-block" runat="server" Text="Add" OnClick="btnAdd_Click" />
                             </div>
                             <div class="col-md-4">
-                                <asp:Button ID="btnUpdate" CssClass="btn btn-primary btn-block" runat="server" Text="Update" />
+                                <asp:Button ID="btnUpdate" CssClass="btn btn-warning btn-block" runat="server" Text="Update" OnClick="btnUpdate_Click" />
                             </div>
                             <div class="col-md-4">
-                                <asp:Button ID="btnDelete" CssClass="btn btn-danger btn-block" runat="server" Text="Delete" />
+                                <asp:Button ID="btnDelete" CssClass="btn btn-danger btn-block" runat="server" Text="Delete" OnClick="btnDelete_Click" />
                             </div>
                         </div>
                     </div>
@@ -101,7 +107,41 @@
                         <%-- Med List GridView --%>
                         <div class="row">
                             <div class="col">
-                                <asp:GridView CssClass="table table-striped table-bordered" ID="gvVisits" runat="server"></asp:GridView>
+                                <asp:GridView CssClass="table table-striped table-bordered" ID="gvVisits" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="VisitGVCS">
+                                    <Columns>
+                                        <asp:BoundField DataField="Id" HeaderText="Appointment ID" InsertVisible="False" ReadOnly="True" SortExpression="Id">
+                                        <ItemStyle Font-Bold="True" />
+                                        </asp:BoundField>
+                                        <asp:TemplateField HeaderText="Appointments">
+                                            <ItemTemplate>
+                                                <ItemTemplate>
+                                                <div class="container-fluid">
+                                                    <%-- Patient Name --%>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <asp:Label ID="fPName" runat="server" Text='<%# Eval("PatientName") %>' Font-Bold="True" Font-Size="X-Large"></asp:Label>
+                                                        </div>
+                                                    </div>
+                                                    <%-- Visit Date and Time --%>
+                                                    <div class="row">
+                                                        <div class="col">
+
+                                                            Patient ID:
+                                                            <asp:Label ID="fPID" runat="server" Text='<%# Eval("PatientID") %>' Font-Bold="True"></asp:Label>
+                                                            &nbsp;| Date:
+                                                            <asp:Label ID="fVDate" runat="server" Text='<%# Eval("VisitDate", "{0:dd-MMM-yyyy}") %>' Font-Bold="True"></asp:Label>
+                                                            &nbsp;| Time:
+                                                            <asp:Label ID="fVTime" runat="server" Text='<%# Eval("Time") %>' Font-Bold="True"></asp:Label>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ItemTemplate>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="VisitGVCS" runat="server" ConnectionString="<%$ ConnectionStrings:PatientGVCS %>" SelectCommand="SELECT * FROM [Visit]"></asp:SqlDataSource>
                             </div>
                         </div>
                     </div>

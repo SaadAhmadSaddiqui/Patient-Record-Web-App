@@ -112,5 +112,14 @@ namespace Patient_Record_Web_App
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvVisits;
+
+        /// <summary>
+        /// VisitGVCS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource VisitGVCS;
     }
 }

@@ -4,13 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Diagnostics;
 
 namespace Patient_Record_Web_App
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             try
             {
                 if (Session["Role"] == null)
@@ -28,6 +36,8 @@ namespace Patient_Record_Web_App
                     linkMedicines.Visible = false; // Medicines button
                     linkAppointmentManagement.Visible = false; // Appointments button
                     linkPatientManagement.Visible = false; // Patient Management button
+
+                    mCount.InnerText = 0.ToString();
                 }
                 else if (Session["Role"].Equals("User"))
                 {
@@ -46,6 +56,9 @@ namespace Patient_Record_Web_App
                     linkMedicines.Visible = false; // Medicines button
                     linkAppointmentManagement.Visible = false; // Appointments button
                     linkPatientManagement.Visible = false; // Patient Management button
+
+                    BindCartNumber();
+                    
                 }
                 else if (Session["Role"].Equals("Admin"))
                 {
@@ -118,6 +131,45 @@ namespace Patient_Record_Web_App
         protected void linkMarket_Click(object sender, EventArgs e)
         {
             Response.Redirect("Medicines.aspx");
+        }
+
+        protected void linkCart_Click(object sender, EventArgs e)
+        {
+            if (Session["Role"] == null)
+            {
+                Response.Redirect("UserLogin.aspx");
+            }
+            else
+            {
+                Response.Redirect("Cart.aspx");
+            }
+        }
+
+        public void BindCartNumber()
+        {
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Cart", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            mCount.InnerText = dt.Rows.Count.ToString();
+
+            con.Close();
+        }
+
+        protected void saad_Click(object sender, EventArgs e)
+        {
+            string file = @"C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record Web App\Files\Saad's CV.docx";
+            Process.Start(file);
+            //string path = Server.MapPath("Files/Saad's CV");
+            //StreamReader reader = File.OpenText(path);
+        }
+
+        protected void Meher_Click(object sender, EventArgs e)
+        {
+            string file = @"C:\Users\saad\Documents\Visual Studio 2019\Projects\Patient Record Web App\Files\Meher's CV.docx";
+            Process.Start(file);
         }
     }
 }

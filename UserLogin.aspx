@@ -33,7 +33,6 @@
                                     <asp:TextBox CssClass="form-control" ID="txtPassword" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <input id="Button1" type="button" value="button" runat="server"/>
                                     <asp:Button ID="btnLogin" CssClass="btn btn-success btn-block" runat="server" Text="Login" OnClick="btnLogin_Click" />
                                 </div>
                                 <div class="form-group">

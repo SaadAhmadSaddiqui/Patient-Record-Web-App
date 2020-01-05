@@ -94,6 +94,8 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.4.1.slim.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="Cart.aspx" />
+    <Content Include="CheckOutPage.aspx" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
     <Content Include="fontawesome\css\all.css" />
@@ -1719,6 +1721,20 @@
     <Compile Include="Appointments.aspx.designer.cs">
       <DependentUpon>Appointments.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutPage.aspx.cs">
+      <DependentUpon>CheckOutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOutPage.aspx.designer.cs">
+      <DependentUpon>CheckOutPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1825,6 +1841,8 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.ttf" />
     <Content Include="fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Files\Meher%27s CV.docx" />
+    <Content Include="Files\Saad%27s CV.docx" />
     <None Include="packages.config" />
     <Content Include="PRSMaster.Master" />
     <None Include="Web.Debug.config">
@@ -1834,6 +1852,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

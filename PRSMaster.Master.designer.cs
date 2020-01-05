@@ -42,6 +42,24 @@ namespace Patient_Record_Web_App
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
+        /// saad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton saad;
+
+        /// <summary>
+        /// Meher control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Meher;
+
+        /// <summary>
         /// linkMarket control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,24 @@ namespace Patient_Record_Web_App
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton linkMarket;
+
+        /// <summary>
+        /// linkCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkCart;
+
+        /// <summary>
+        /// mCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mCount;
 
         /// <summary>
         /// linkLogIn control.

@@ -11,25 +11,16 @@ namespace Patient_Record_Web_App
 {
 
 
-    public partial class Medicines
+    public partial class CheckOutPage
     {
 
         /// <summary>
-        /// gvMeds control.
+        /// btnHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMeds;
-
-        /// <summary>
-        /// MedicineGVCS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource MedicineGVCS;
+        protected global::System.Web.UI.WebControls.Button btnHome;
     }
 }
