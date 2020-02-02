@@ -56,15 +56,26 @@ namespace Patient_Record_Web_App
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Medicine (MedicineName, MedicineFormula, MedicinePrice) VALUES (@mName, @mFormula, @mPrice)", con);
-                    cmd.Parameters.AddWithValue("@mName", txtMedName.Text);
-                    cmd.Parameters.AddWithValue("@mFormula", txtMedFormula.Text);
-                    cmd.Parameters.AddWithValue("@mPrice", txtMedPrice.Text);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    Response.Write("<script>alert('Medicine Added!');</script>");
-                    gvMeds.DataBind();
-                    Clear();
+                    SqlCommand ncmd = new SqlCommand("SELECT * FROM Medicine WHERE MedicineName = '" + txtMedName.Text + "'", con);
+                    SqlDataReader dr = ncmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        Response.Write("<script>alert('Medicine is already added.');</script>");
+                    }
+                    else
+                    {
+                        dr.Close();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Medicine (MedicineName, MedicineFormula, MedicinePrice) VALUES (@mName, @mFormula, @mPrice)", con);
+                        cmd.Parameters.AddWithValue("@mName", txtMedName.Text);
+                        cmd.Parameters.AddWithValue("@mFormula", txtMedFormula.Text);
+                        cmd.Parameters.AddWithValue("@mPrice", txtMedPrice.Text);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        Response.Write("<script>alert('Medicine Added!');</script>");
+                        gvMeds.DataBind();
+                        Clear();
+                    }
+                    
                 }
 
             }

@@ -78,7 +78,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="txtPatientContact" placeholder="Contact" runat="server"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="txtPatientContact" placeholder="Contact" runat="server" TextMode="SingleLine"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">

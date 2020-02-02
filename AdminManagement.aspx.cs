@@ -56,14 +56,25 @@ namespace Patient_Record_Web_App
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("INSERT INTO AdminLogin (Username, Password) VALUES (@aUsername, @aPassword)", con);
-                    cmd.Parameters.AddWithValue("@aUsername", txtAdminUsername.Text);
-                    cmd.Parameters.AddWithValue("@aPassword", txtAdminPassword.Text);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    Response.Write("<script>alert('Admin Added!');</script>");
-                    gvAdmins.DataBind();
-                    Clear();
+                    SqlCommand ncmd = new SqlCommand("SELECT * FROM AdminLogin WHERE Username = '" + txtAdminUsername.Text + "'", con);
+                    SqlDataReader dr = ncmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        Response.Write("<script>alert('Username is already taken, try another username.');</script>");
+                    }
+                    else
+                    {
+                        dr.Close();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO AdminLogin (Username, Password) VALUES (@aUsername, @aPassword)", con);
+                        cmd.Parameters.AddWithValue("@aUsername", txtAdminUsername.Text);
+                        cmd.Parameters.AddWithValue("@aPassword", txtAdminPassword.Text);
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        Response.Write("<script>alert('Admin Added!');</script>");
+                        gvAdmins.DataBind();
+                        Clear();
+                    }
+                    
                 }
 
             }

@@ -14,6 +14,7 @@ namespace Patient_Record_Web_App
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
 
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             gvVisits.DataBind();
@@ -35,6 +36,7 @@ namespace Patient_Record_Web_App
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             NewAppointment();
+            //CheckTime();
         }
 
         // Update Visit Button
@@ -67,6 +69,7 @@ namespace Patient_Record_Web_App
                 }
                 else
                 {
+                    
                     SqlCommand cmd = new SqlCommand("INSERT INTO Visit (PatientName, PatientID, VisitDate, Time) VALUES (@pName, @pID, @vDate, @vTime)", con);
                     cmd.Parameters.AddWithValue("@pName", txtPatientName.Text);
                     cmd.Parameters.AddWithValue("@pID", txtPatientID.Text);
@@ -83,6 +86,35 @@ namespace Patient_Record_Web_App
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
+
+        void CheckTime()
+        {
+            con.Open();
+            SqlCommand ncmd = new SqlCommand("SELECT Time FROM Visit WHERE VisitDate = '" + txtVisitDate.Text + "' ", con);
+            SqlDataAdapter da = new SqlDataAdapter(ncmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            SqlDataReader dr = ncmd.ExecuteReader();
+            DateTime[] times = new DateTime[dt.Rows.Count];
+            if (dr.HasRows)
+            {
+                for (int i = 0; dr.Read(); i++)
+                {
+                    times[i] = (DateTime)dr.GetValue(0);
+                    Response.Write("<script>console.log('" + dr.GetValue(0).ToString() + "');</script>");
+                }
+            } else
+            {
+                Response.Write("<script>console.log('nothing');</script>");
+
+            }
+            dr.Close();
+            con.Close();
+            for (int i = 0; i < times.Length; i++)
+            {
+                //times[i].
             }
         }
 
